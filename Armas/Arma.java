@@ -1,3 +1,6 @@
+package Armas;
+import Personagens.Personagem;
+
 public abstract class Arma extends Personagem {
     
     private String nome;

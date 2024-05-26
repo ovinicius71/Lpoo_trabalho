@@ -1,3 +1,8 @@
+package Personagens;
+
+import Armas.Arma;
+
+
 public abstract class Personagem {
     private String nomeTipo;
     private double saude;
@@ -6,7 +11,7 @@ public abstract class Personagem {
     private Arma arma;
     
     public Personagem (String nomeTipo, double saude, double forca, double destreza,Arma arma){
-        
+
     }
     
     public printStatus(){
