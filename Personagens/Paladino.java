@@ -1,5 +1,5 @@
 package Personagens;
-import Armas.Armas;
+import Armas.ArmaPaladino;
 
 public class Paladino extends Personagem {
 
