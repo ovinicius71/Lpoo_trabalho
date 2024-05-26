@@ -1,8 +1,12 @@
 # 1 Introdução 
-Neste documento estão detalhados os procedimentos que devem ser seguidos para o desenvolvimento do Trabalho Prático e constituirá como  parte da nota final da disciplina de LPOO.
-É fortemente recomendado que os estudantes acessem com freqüência este documento para
-esclarecer possíveis dúvidas, estar ciente do cronograma e estar a par de possíveis atualizações/alterações no trabalho.
+Este repositório contém o projeto de um jogo de RPG (Role-Playing Game) desenvolvido para a disciplina de Linguagem de Programação Orientada a Objetos (LPOO). O objetivo principal deste projeto é aplicar os conceitos aprendidos durante o curso, como herança, polimorfismo, encapsulamento e uso de design patterns, em um contexto prático.
 ## 2 Objetivo 
 O objetivo deste trabalho é implementar em linguagem de programação Java um sistema
 de combates de um jogo de RPG (Role Playing Game). Para isso, deve ser implementado a possibilidade de escolha entre três personagens principais, cada um possuindo armas e habilidades
 únicas.
+### 3 Objetivo de aprendizado
+- Implementar classes e objetos de maneira eficiente.
+- Utilizar herança para criar hierarquias de classes complexas.
+- Aplicar polimorfismo para flexibilizar e expandir o comportamento dos objetos.
+- Encapsular dados e funcionalidades para garantir a integridade e a modularidade do código.
+- Adotar padrões de design para resolver problemas recorrentes no desenvolvimento de software.
