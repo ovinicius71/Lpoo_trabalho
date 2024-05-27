@@ -1,10 +1,15 @@
 package Personagens;
 import Armas.ArmaPaladino;
 
-public class Paladino extends Personagem {
+// falta implementar a arma para o personagem ainda 
 
-    public Paladino (double saude,double forca,double destreza,Arma arma ){
-        super("Paladino" );
+public class Paladino extends Personagem {
+    double saude;
+    double dano;
+    double destreza;
+    ArmaPaladino arma; 
+    public Paladino (double saude,double forca,double destreza,ArmaPaladino arma ){
+        super("Paladino",saude,forca,destreza,arma );
     }
     
 }

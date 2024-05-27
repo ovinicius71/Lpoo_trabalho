@@ -1,10 +1,16 @@
 package Personagens;
 import Armas.ArmaMago;
 
-public class Mago extends Personagem{
+// falta implementar a arma para o personagem ainda 
 
-    public Mago (){
-        super("Mago");
+public class Mago extends Personagem{
+    double saude;
+    double dano;
+    double destreza;
+    ArmaMago arma;
+    public Mago (double saude,double dano,double destreza,ArmaMago arma){
+        
+        super("Mago", saude,dano,destreza,arma);
     }
     
 }
