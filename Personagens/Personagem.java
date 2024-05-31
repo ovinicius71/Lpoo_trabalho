@@ -46,7 +46,7 @@ public abstract class Personagem {
             b.recebeDano(dano);
             System.out.println("O ataque foi efetivo com " + dano + " pontos de dano!");
         }
-        else if (forca < b.forca && destreza < b.destreza) {
+        else if (forca < b.forca || destreza < b.destreza) {
             double dano = b.calculaDano();
             this.recebeDano(dano);
             System.out.println("O ataque foi inefetivo e revidado com " + dano + " pontos de dano!");
