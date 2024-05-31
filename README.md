@@ -10,3 +10,12 @@ de combates de um jogo de RPG (Role Playing Game). Para isso, deve ser implement
 - Aplicar polimorfismo para flexibilizar e expandir o comportamento dos objetos.
 - Encapsular dados e funcionalidades para garantir a integridade e a modularidade do código.
 - Adotar padrões de design para resolver problemas recorrentes no desenvolvimento de software.
+
+#### 4 Como jogar ?
+- Utilize o git clone para copiar o repositorio
+- No seu terminal acesse a pagina aonde foi clonado o repositorio
+- De o comando javac *.java
+- E por ultimo de o comando java RPG
+
+##### Requisitos
+- Java 8
