@@ -2,7 +2,6 @@ package Personagens;
 
 import Armas.Arma;
 
-//falta implementar a recebe dano, tem que perguntar pois nao vi utilidade
 
 public abstract class Personagem {
     private String nomeTipo;
