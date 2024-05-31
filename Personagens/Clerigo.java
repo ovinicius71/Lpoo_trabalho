@@ -1,14 +1,11 @@
 package Personagens;
-import Armas.ArmaClerigo;
+import Armas.Arma;
 
 // falta implementar a arma para o personagem ainda 
 
 public class Clerigo extends Personagem {
-    double saude;
-    double dano;
-    double destreza;
-    ArmaClerigo arma; 
-    public Clerigo (double saude,double dano,double destreza, ArmaClerigo arma){
+    
+    public Clerigo (double saude,double dano,double destreza, Arma arma){
 
         super("Clerigo", saude, dano, destreza, arma);
     }

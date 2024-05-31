@@ -5,9 +5,9 @@ public abstract class Arma {
     private String nome;
     private double modDano;
 
-    public Arma (String nome, double modificador){
+    public Arma (String nome, double modDano){
         this.nome = nome;
-        this.modDano = modificador;
+        this.modDano = modDano;
     }
     public String getNome(){
         return nome;

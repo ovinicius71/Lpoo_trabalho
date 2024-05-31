@@ -20,28 +20,46 @@ public abstract class Personagem {
 
     }
     
-    public printStatus(){
-        System.out.printf("Saude: %2f, Forca: %2f, Destreza: %2f, %s ", this.saude,this.forca,this.destreza,this.arma.getNome());
+    public void printStatus(){
+        if (estaMorto()){
+            System.out.println(nomeTipo + " [Morreu, Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+        }
+        else{
+            System.out.println(nomeTipo + " [Saude: " + saude + ", Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+        }
     }
-    public atacar (Personagem b){
+    public void atacar (Personagem b){
+        if (estaMorto()){
+            System.out.println("O " + nomeTipo + " não consegue atacar, pois está morto.");
+            return;
+        }
+
+        System.out.println("O " + nomeTipo + " ataca o " + b.nomeTipo + " com " + arma.getNome() + ".");
+
+        if (b.estaMorto()) {
+            System.out.println("Pare! O " + b.nomeTipo + " já está morto!");
+            return;
+        }
+
         if (this.forca > b.forca && this.destreza > b.destreza ){
             double dano = calculaDano();
-            b.saude = b.saude - (dano * b.saude);
+            b.recebeDano(dano);
+            System.out.println("O ataque foi efetivo com " + dano + " pontos de dano!");
         }
-        else if (this.forca == b.forca && this.destreza == b.destreza){
-            System.out.println("Nada aconteceu");
+        else if (forca < b.forca && destreza < b.destreza) {
+            double dano = b.calculaDano();
+            this.recebeDano(dano);
+            System.out.println("O ataque foi inefetivo e revidado com " + dano + " pontos de dano!");
         }
         else {
-            double dano = b.calculaDano();
-            this.saude = this.saude - (dano * this.saude);
+            System.out.println("O ataque foi defendido, ninguem se machucou!");
         }
     }
-    private double calculaDano (){
-        return (this.arma.getModificadorDano());
-
+    protected double calculaDano (){
+        return forca * arma.getModificadorDano();
     }
-    private recebeDano(double pontosDano){
-
+    protected  void recebeDano(double pontosDano){
+        saude -= pontosDano;
     }
     private boolean estaMorto (){
         if (this.saude < 1){
