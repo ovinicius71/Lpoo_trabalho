@@ -1,36 +1,30 @@
-import java.util.Scanner;
-
 import Armas.Arma;
 import Armas.Espada;
 import Armas.Lanca;
 import Armas.Maca;
 import Armas.Martelo;
+import Armas.Psikappa;
 import Armas.Transmutacao;
 import Personagens.Clerigo;
 import Personagens.Mago;
 import Personagens.Paladino;
 import Personagens.Personagem;
-import Armas.Psikappa;
+import java.util.Scanner;
 
 public class RPG {
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Digite os detalhes do primeiro personagem:");
         Personagem personagem1 = criarPersonagem(scanner);
-        System.out.println("Digite os detalhes do segundo personagem:");
-        Personagem personagem2 = criarPersonagem(scanner);
-
         personagem1.printStatus();
+        Personagem personagem2 = criarPersonagem(scanner);
         personagem2.printStatus();
 
         while (true) {
-            System.out.println("Digite o número do personagem atacante e defensor (ou 0 0 para terminar):");
             int atacante = scanner.nextInt();
             int defensor = scanner.nextInt();
 
-            if (atacante == 0 && defensor == 0) {
+            if (atacante == 0) {
                 break;
             }
 

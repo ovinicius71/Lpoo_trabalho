@@ -42,14 +42,14 @@ public abstract class Personagem {
             System.out.println("Pare! O " + b.nomeTipo + " já está morto!");
             return;
         }
-        //verifica se a forca e destreza do personagem atacante é maior que do defensor se for o ataca é efetivo
-        if (this.forca > b.forca && this.destreza > b.destreza ){
+        //verifica se a destreza do personagem atacante é maior que do defensor se for o ataca é efetivo
+        if (this.destreza > b.destreza ){
             double dano = calculaDano();
             b.recebeDano(dano);
             System.out.println("O ataque foi efetivo com " + dano + " pontos de dano!");
         }
-        //verifica se a forca ou destreza do personagem atacante é menor que do defensor se for o ataque é revidado
-        else if (forca < b.forca || destreza < b.destreza) {
+        //verifica se a destreza do personagem atacante é menor que do defensor se for o ataque é revidado
+        else if (this.destreza < b.destreza) {
             double dano = b.calculaDano();
             this.recebeDano(dano);
             System.out.println("O ataque foi inefetivo e revidado com " + dano + " pontos de dano!");
